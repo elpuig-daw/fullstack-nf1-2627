@@ -2,7 +2,7 @@
 <hr>  
 
 ### 2DAM & 2DAW
-- NF1. Arquitectures i backend
+- NF1. Arquitectures i backend  
     -[ ] Repàs de POO (Classe, Objecte, tipus, ...)  
     -[ ] Interfaces  
     -[ ] Functional Interfaces - Lambdes - Streams  
