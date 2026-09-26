@@ -3,10 +3,11 @@
 
 ### 2DAM & 2DAW
 - NF1. Arquitectures i backend  
-    -[ ] Repàs de POO (Classe, Objecte, tipus, ...)  
-    -[ ] Interfaces  
+    -[X] Repàs de POO (Classe, Objecte, tipus, ...)  
+    -[X] Interfaces  
+    -[X] Abstract class Vs Interfaces
     -[ ] Functional Interfaces - Lambdes - Streams  
-    -[ ] Abstract class Vs Interfaces  
+    -[ ] Collections - List, Set, Map, ...
     -[ ] Constructor privat - Singleton  
     -[ ] Solid - S, O, L ...  
     -[ ] MVC  
