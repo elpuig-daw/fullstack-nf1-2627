@@ -6,6 +6,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.function.Function;
 
 public class Alumne implements Comparable<Alumne>{
     private LocalDate dataNaixament;
@@ -107,10 +108,13 @@ public class Alumne implements Comparable<Alumne>{
 
         long num = llistaAlumnes.stream().filter(a -> a.getDataNaixament().getYear()<1995)
                 .count();
+        long qqq = llistaAlumnes.stream().filter(a -> a.getNom().contains("R")).count();
         System.out.println(num);
 
         List<String> noms = Arrays.asList("Joan","Maria","Pere","Anna","Pau","Marta");
-        List<Alumne> al = noms.stream().map(Alumne::new).toList();
+        List<Alumne> al = noms.stream()
+                .map(Alumne::new)
+                .toList();
 
     }
 
