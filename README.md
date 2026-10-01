@@ -5,9 +5,9 @@
 - NF1. Arquitectures i backend  
     -[X] Repàs de POO (Classe, Objecte, tipus, ...)  
     -[X] Interfaces  
-    -[X] Abstract class Vs Interfaces
-    -[ ] Functional Interfaces - Lambdes - Streams  
-    -[ ] Collections - List, Set, Map, ...
+    -[X] Abstract class Vs Interfaces  
+    -[X] Functional Interfaces - Lambdes - Streams  
+    -[X] Collections - List, Set, Map, ...  
     -[ ] Constructor privat - Singleton  
     -[ ] Solid - S, O, L ...  
     -[ ] MVC  
