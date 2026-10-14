@@ -32,8 +32,8 @@ Detall de les classes:
 
 - **`User`**: dades de l'usuari (nom). **`Book`**: dades del llibre (títol).
 - **`Reservation`**: encapsula la reserva (un `User` i un `Book`) i en sobreescriu `toString()`.
-- **`ReservationService`**: té el mètode `reserve(User, Book)` que crea la `Reservation` i la desa en un fitxer de text (p. ex. `reservations.txt`, una reserva per línia, `nom;títol`),
-  i el mètode `getAllReservations()`, que les **recupera** del fitxer perquè persisteixin entre execucions.
+- **`ReservationService`**: té el mètode `reserve(User, Book)` que crea la `Reservation` i la desa en una **llista en memòria** (`ArrayList<Reservation>`, atribut del servei),
+  i el mètode `getAllReservations()`, que retorna les reserves desades (les dades es perden en tancar l'aplicació).
 - **`ConsoleView`**: mostra el menú, demana les dades per consola i mostra confirmacions,
   llistats i errors. No conté lògica de negoci.
 - **`ReservationController`**: rep el `ReservationService` i la `ConsoleView` pel **constructor**,
@@ -44,8 +44,10 @@ Detall de les classes:
 
 ## Reflexió
 
-> Reflexiona: en MVC no hi ha cap port ni adaptador. Quines classes has hagut de modificar
-> per desar en fitxer? Compara-ho amb la versió hexagonal, on n'hi ha prou de canviar una línia del `Main`.
+> Reflexiona: ara les reserves es desen en memòria (`ArrayList`). Si haguessis de desar-les en
+> un fitxer o en una base de dades perquè persisteixin entre execucions, quines classes
+> hauries de modificar? Afectaria la vista o el controlador? Quin inconvenient té que
+> `ReservationService` barregi la lògica de negoci amb la manera de desar les dades?
 
 ## Diagrama
 
@@ -64,7 +66,7 @@ sequenceDiagram
     V-->>C: nom i títol
     C->>S: reserve(User, Book)
     S->>S: new Reservation(user, book)
-    S->>S: desa al fitxer
+    S->>S: desa a l'ArrayList
     S-->>C: reservation
     C->>V: showConfirmation(...)
     V-->>U: missatge de confirmació
